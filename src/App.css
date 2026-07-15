@@ -1045,9 +1045,101 @@
 }
 
 /* ── Responsive ──────────────────────────────── */
+@media (max-width: 1024px) {
+  .navbar-inner,
+  .section-inner,
+  .footer-inner {
+    max-width: 920px;
+  }
+
+  .hero {
+    padding: 220px 24px 150px;
+  }
+
+  .services-grid,
+  .reviews-grid,
+  .steps-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .why-split {
+    gap: 44px;
+  }
+}
+
 @media (max-width: 768px) {
+  .navbar,
+  .navbar.navbar-transparent,
+  .navbar.navbar-menu-open {
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom-color: rgba(228, 63, 100, 0.14);
+    box-shadow: 0 2px 16px rgba(23, 95, 92, 0.08);
+  }
+
+  .navbar-inner {
+    height: 72px;
+    padding: 0 18px;
+  }
+
+  .navbar-logo {
+    width: 154px;
+    height: 64px;
+    overflow: hidden;
+  }
+
+  .navbar-logo-image {
+    width: 126px;
+    height: 78px;
+    transform: translate(-20px, 6px) scale(2.35);
+    transform-origin: left center;
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  .hamburger {
+    padding: 10px;
+    margin-right: -10px;
+  }
+
+  .navbar-links {
+    top: 72px;
+    padding: 10px 18px 20px;
+  }
+
+  .navbar-links li,
+  .navbar-links a {
+    width: 100%;
+  }
+
+  .navbar-links a {
+    display: block;
+    text-align: center;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 152px 20px 88px;
+    background-position: 58% center;
+  }
+
+  .hero::before {
+    background: rgba(255, 255, 255, 0.54);
+  }
+
   .hero h1 {
-    font-size: 36px;
+    font-size: clamp(32px, 9vw, 40px);
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .hero p:not(.hero-areas):not(.hero-badge) {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .hero-badge {
+    margin-bottom: 20px;
   }
 
   .hero-stats {
@@ -1063,7 +1155,20 @@
   }
 
   .section-title {
-    font-size: 28px;
+    font-size: clamp(28px, 8vw, 34px);
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  .section-header {
+    margin-bottom: 34px;
+  }
+
+  .section-subtitle,
+  .contact-intro p {
+    font-size: 16px;
   }
 
   .footer-top {
@@ -1071,10 +1176,26 @@
     gap: 32px;
   }
 
+  .footer {
+    padding: 48px 20px 24px;
+  }
+
+  .footer-intro {
+    transform: none;
+  }
+
+  .footer-brand {
+    margin-bottom: -24px;
+  }
+
+  .footer-col-services {
+    padding-left: 0;
+  }
+
   .navbar-links {
     display: none;
     position: absolute;
-    top: 88px;
+    top: 72px;
     left: 0;
     right: 0;
     background: white;
@@ -1102,7 +1223,9 @@
     grid-template-columns: 1fr;
   }
 
-  .reviews-grid {
+  .services-grid,
+  .reviews-grid,
+  .steps-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1111,12 +1234,16 @@
     gap: 36px;
   }
 
-  .steps-grid {
-    grid-template-columns: 1fr;
-  }
-
   .page-hero h1 {
     font-size: 32px;
+  }
+
+  .page-hero {
+    padding: 112px 20px 54px;
+  }
+
+  .page-hero p {
+    font-size: 16px;
   }
 
   .contact-cards {
@@ -1131,5 +1258,81 @@
   .hours-banner-divider {
     width: 52px;
     height: 1px;
+  }
+
+  .service-card,
+  .review-card,
+  .step-card {
+    padding: 28px 24px;
+  }
+
+  .service-card-full {
+    padding: 28px 24px;
+  }
+
+  .service-card-img {
+    width: calc(100% + 48px);
+    height: 210px;
+    margin: -28px -24px 0;
+  }
+
+  .contact-intro {
+    margin-bottom: 34px;
+  }
+
+  .contact-card {
+    padding: 34px 22px;
+  }
+
+  .contact-card-value {
+    max-width: 100%;
+    font-size: 18px;
+    overflow-wrap: anywhere;
+  }
+
+  .cta-banner {
+    padding: 58px 20px;
+  }
+
+  .cta-banner h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    padding: 132px 16px 70px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons a,
+  .why-cta,
+  .cta-banner .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section {
+    padding: 52px 16px;
+  }
+
+  .services-full-grid,
+  .contact-cards {
+    min-width: 0;
+  }
+
+  .why-image-wrap {
+    border-radius: 28px;
+  }
+
+  .faq-question {
+    padding: 18px;
+  }
+
+  .faq-answer {
+    padding: 0 18px 20px;
   }
 }

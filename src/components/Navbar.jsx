@@ -17,13 +17,13 @@ export default function Navbar() {
   const isTransparent = pathname === '/' && !scrolled
 
   return (
-    <nav className={`navbar${isTransparent ? ' navbar-transparent' : ''}`}>
+    <nav className={`navbar${isTransparent ? ' navbar-transparent' : ''}${open ? ' navbar-menu-open' : ''}`}>
       <div className="navbar-inner">
         <NavLink to="/" className="navbar-logo" onClick={() => setOpen(false)}>
           <img src={logo} alt="Pristine Cleaning by Nicole" className="navbar-logo-image" />
         </NavLink>
 
-        <ul className={`navbar-links${open ? ' open' : ''}`}>
+        <ul id="primary-navigation" className={`navbar-links${open ? ' open' : ''}`}>
           <li>
             <NavLink to="/" end onClick={() => setOpen(false)}>
               Home
@@ -45,6 +45,8 @@ export default function Navbar() {
           className="hamburger"
           onClick={() => setOpen(o => !o)}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="primary-navigation"
         >
           <span />
           <span />
