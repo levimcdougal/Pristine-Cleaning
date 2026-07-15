@@ -56,6 +56,9 @@
 .navbar-logo {
   display: flex;
   align-items: center;
+  width: 190px;
+  height: 78px;
+  overflow: hidden;
   gap: 10px;
   font-size: 21px;
   font-weight: 800;
@@ -69,7 +72,7 @@
   height: 78px;
   object-fit: contain;
   border-radius: 12px;
-  transform: translate(-24px, 8px) scale(2.75);
+  transform: translate(-12px, 3px) scale(1.65);
   transform-origin: left center;
 }
 
@@ -166,17 +169,21 @@
 }
 
 .footer-brand {
+  width: 180px;
+  height: 100px;
+  overflow: hidden;
   font-size: 19px;
   font-weight: 700;
   color: white;
-  margin-bottom: -38px;
+  margin-bottom: 8px;
 }
 
 .footer-logo {
   display: block;
-  width: 95px;
+  width: 180px;
   height: auto;
   border-radius: 16px;
+  transform: translateY(-10px);
 }
 
 .footer-tagline {
@@ -1090,7 +1097,7 @@
   .navbar-logo-image {
     width: 126px;
     height: 78px;
-    transform: translate(-20px, 6px) scale(2.35);
+    transform: translate(-10px, 2px) scale(1.45);
     transform-origin: left center;
     object-fit: contain;
     object-position: left center;
@@ -1182,10 +1189,6 @@
 
   .footer-intro {
     transform: none;
-  }
-
-  .footer-brand {
-    margin-bottom: -24px;
   }
 
   .footer-col-services {
